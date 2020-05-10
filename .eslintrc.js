@@ -1,5 +1,5 @@
 module.exports = {
-  extends: 'airbnb-base',
+  extends: 'eslint:recommended',
   plugins: ['svelte3'],
   env: {
     es6: true,
@@ -9,10 +9,13 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: 'module'
   },
+  rules: {
+    quotes: ["error", "single", { "avoidEscape": true }],
+  },
   overrides: [
     {
       files: ['**/*.svelte'],
-      processor: 'svelte3/svelte3'
+      processor: 'svelte3/svelte3',
     },
   ],
 };
