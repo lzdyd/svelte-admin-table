@@ -1,30 +1,20 @@
 <script>
-	export let name;
+  import Dashboard from './components/Dashboard/Dashboard.svelte';
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<Dashboard />
 
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+<style type="text/scss" global>
+  @import 'style/global.scss';
+  @import 'style/theme.scss';
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+  html {
+    font-size: 16px;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  body {
+    line-height: 1;
+    background-color: $main-blue;
+    color: $main-white;
+  }
 </style>

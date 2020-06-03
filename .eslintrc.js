@@ -3,7 +3,8 @@ module.exports = {
   plugins: ['svelte3'],
   env: {
     es6: true,
-    browser: true
+    browser: true,
+    node: true,
   },
   parserOptions: {
     ecmaVersion: 2019,
